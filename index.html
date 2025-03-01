@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <main class="generator">
+      <form id="form" class="generator__form">
+        <h1>Password Generator</h1>
+
+        <fieldset class="generator__fieldset">
+          <p>No selection is equivalent to selecting all options</p>
+          <label>
+            <input type="checkbox" name="withSpecialCharacters" />
+            <span>Include special characters</span>
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" name="withUppercaseLetters" />
+            <span>Include uppercase letters</span>
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" name="withLowercaseLetters" />
+            <span>Include lowercase letters</span>
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" name="withNumbers" />
+            <span>Include numbers</span>
+          </label>
+          <br />
+          <label>
+            <span>Password's length</span>
+            <input type="number" name="length" value="36" />
+            <span>(default: 36)</span>
+          </label>
+          <br />
+          <br />
+          <button type="submit">Generate password</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </form>
+
+      <br />
+
+      <form id="clipboard" class="generator__form generator__form--result">
+        <fieldset id="result" disabled class="generator__fieldset">
+          <span>Your password: </span>
+          <input type="text" id="password" />
+          <button type="submit">Copy to clipboard</button>
+        </fieldset>
+      </form>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

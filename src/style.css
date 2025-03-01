@@ -1,0 +1,57 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: darkslateblue;
+}
+
+.generator {
+  background-color: white;
+  padding: 1rem;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 12rem;
+  border-radius: 0.25rem;
+}
+
+.generator__fieldset {
+  border-radius: 0.25rem;
+  accent-color: darkorange;
+}
+
+.generator__form--result .generator__fieldset {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.generator__form--result .generator__fieldset input {
+  flex: 1;
+}
+
+fieldset:enabled input,
+fieldset:enabled button {
+  cursor: pointer;
+}
+
+fieldset:disabled input,
+fieldset:disabled button {
+  cursor: default;
+}
